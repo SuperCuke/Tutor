@@ -4,8 +4,12 @@
     var siteSection = Model.AncestorOrSelf(2);
     var selection = siteSection.Children.Where(x => x.IsVisible());
 }
-
-@foreach (var item in selection)
-{
-    <a class="nav-link nav-link--black nav-link--air-bottom @(item.IsAncestorOrSelf(Model) ? "nav-link--active" : null)" href="@item.Url">@item.Name</a>
-}
+    <nav id="nav">
+        <ul class="main-menu nav navbar-nav navbar-right">
+            @foreach (var item in selection)
+            {
+                @*<a class="nav-link nav-link--black nav-link--air-bottom @(item.IsAncestorOrSelf(Model) ? "nav-link--active" : null)" href="@item.Url">@item.Name</a>*@
+                <li><a href="@item.Url">@item.Name</a></li>
+            }
+        </ul>
+    </nav>

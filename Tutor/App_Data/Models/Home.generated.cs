@@ -46,67 +46,88 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// Content
+		/// AboutMeDescription
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("bodyText")]
-		public Newtonsoft.Json.Linq.JToken BodyText => this.Value<Newtonsoft.Json.Linq.JToken>("bodyText");
+		[ImplementPropertyType("aboutMeDescription")]
+		public string AboutMeDescription => this.Value<string>("aboutMeDescription");
 
 		///<summary>
-		/// Color Theme
+		/// AboutMePhoto
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("colorTheme")]
-		public string ColorTheme => this.Value<string>("colorTheme");
+		[ImplementPropertyType("aboutMePhoto")]
+		public Umbraco.Core.PropertyEditors.ValueConverters.ImageCropperValue AboutMePhoto => this.Value<Umbraco.Core.PropertyEditors.ValueConverters.ImageCropperValue>("aboutMePhoto");
 
 		///<summary>
-		/// Font
+		/// AboutMeSubTitle
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("font")]
-		public string Font => this.Value<string>("font");
+		[ImplementPropertyType("aboutMeSubTitle")]
+		public string AboutMeSubTitle => this.Value<string>("aboutMeSubTitle");
 
 		///<summary>
-		/// Address
+		/// AboutMeTitle
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("footerAddress")]
-		public string FooterAddress => this.Value<string>("footerAddress");
+		[ImplementPropertyType("aboutMeTitle")]
+		public string AboutMeTitle => this.Value<string>("aboutMeTitle");
 
 		///<summary>
-		/// Call To Action Caption: Caption on the Call To Action Button
+		/// ContactDescription
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("footerCTACaption")]
-		public string FooterCtacaption => this.Value<string>("footerCTACaption");
+		[ImplementPropertyType("contactDescription")]
+		public string ContactDescription => this.Value<string>("contactDescription");
 
 		///<summary>
-		/// Call To Action Link
+		/// ContactTitle
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("FooterCtalink")]
-		public IPublishedContent FooterCtalink => this.Value<IPublishedContent>("FooterCtalink");
+		[ImplementPropertyType("contactTitle")]
+		public string ContactTitle => this.Value<string>("contactTitle");
 
 		///<summary>
-		/// Description
+		/// CoursesBlocks
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("footerDescription")]
-		public string FooterDescription => this.Value<string>("footerDescription");
+		[ImplementPropertyType("coursesBlocks")]
+		public IEnumerable<IPublishedContent> CoursesBlocks => this.Value<IEnumerable<IPublishedContent>>("coursesBlocks");
 
 		///<summary>
-		/// Header
+		/// CoursesDescription
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("footerHeader")]
-		public string FooterHeader => this.Value<string>("footerHeader");
+		[ImplementPropertyType("coursesDescription")]
+		public string CoursesDescription => this.Value<string>("coursesDescription");
 
 		///<summary>
-		/// Hero Background: Spice up the homepage by adding a beautiful photo that relates to your business
+		/// CoursesTitle
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("HeroBackgroundImage")]
-		public IPublishedContent HeroBackgroundImage => this.Value<IPublishedContent>("HeroBackgroundImage");
+		[ImplementPropertyType("coursesTitle")]
+		public string CoursesTitle => this.Value<string>("coursesTitle");
+
+		///<summary>
+		/// FeedbackBlocks
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("feedbackBlocks")]
+		public IEnumerable<IPublishedContent> FeedbackBlocks => this.Value<IEnumerable<IPublishedContent>>("feedbackBlocks");
+
+		///<summary>
+		/// FeedbackDescription
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("feedbackDescription")]
+		public string FeedbackDescription => this.Value<string>("feedbackDescription");
+
+		///<summary>
+		/// FeedbackTitle
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("feedbackTitle")]
+		public string FeedbackTitle => this.Value<string>("feedbackTitle");
 
 		///<summary>
 		/// Call To Action Caption: The caption on the button
@@ -137,17 +158,24 @@ namespace Umbraco.Web.PublishedModels
 		public string HeroHeader => this.Value<string>("heroHeader");
 
 		///<summary>
-		/// Logo: Optional. If you add a logo it'll be used in the upper left corner instead of the site name. Make sure to use a transparent logo for best results
+		/// WhyDescription
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("SiteLogo")]
-		public IPublishedContent SiteLogo => this.Value<IPublishedContent>("SiteLogo");
+		[ImplementPropertyType("whyDescription")]
+		public string WhyDescription => this.Value<string>("whyDescription");
 
 		///<summary>
-		/// Sitename: Used on the homepage as well as the title and social cards
+		/// WhyHeader
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("sitename")]
-		public string Sitename => this.Value<string>("sitename");
+		[ImplementPropertyType("whyHeader")]
+		public string WhyHeader => this.Value<string>("whyHeader");
+
+		///<summary>
+		/// WhyMeBlocks
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("whyMeBlocks")]
+		public IEnumerable<IPublishedContent> WhyMeBlocks => this.Value<IEnumerable<IPublishedContent>>("whyMeBlocks");
 	}
 }

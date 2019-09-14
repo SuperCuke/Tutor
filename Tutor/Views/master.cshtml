@@ -4,8 +4,6 @@
     Layout = null;
     // Get basic design settings from the homepage
     var home = (Umbraco.Web.PublishedModels.Home)Model.Root();
-    var font = home.Font;
-    var colorTheme = home.ColorTheme;
 }
 
 <!doctype html>
@@ -45,7 +43,7 @@
             <div class="navbar-header">
                 <!-- Logo -->
                 <div class="navbar-brand">
-                    <a class="logo" href="index.html">
+                    <a class="logo" href="/">
                         <img src="~/Content/img/logo-alt.png" alt="logo">
                     </a>
                 </div>
@@ -135,9 +133,9 @@
     <div id="preloader" style="display: none;"><div class="preloader"></div></div>
     <!-- /preloader -->
     <!-- jQuery Plugins -->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="/Content/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/Content/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/Content/js/main.js"></script>
 
 </body>
 

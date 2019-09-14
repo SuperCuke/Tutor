@@ -446,8 +446,8 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 	position:relative;
 }
 
-.feature + .feature  {
-	margin-top:40px;
+.feature  {
+	margin-top:20px;
 }
 
 .feature .feature-icon {
@@ -543,7 +543,6 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 	right:0;
 	bottom:0;
 	top:0;
-	background-color:#FF6700;
 	opacity:0.7;
 }
 

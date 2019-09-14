@@ -582,6 +582,7 @@ Umbraco.Web.PublishedModels.ContentPage, Tutor, Version=1.0.0.0, Culture=neutral
 Umbraco.Web.PublishedModels.File, Tutor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.Folder, Tutor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.Home, Tutor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.PublishedModels.IconBlock, Tutor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.Image, Tutor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.Member, Tutor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.NavigationBase, Tutor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -589,6 +590,7 @@ Umbraco.Web.PublishedModels.People, Tutor, Version=1.0.0.0, Culture=neutral, Pub
 Umbraco.Web.PublishedModels.Person, Tutor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.Product, Tutor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.Products, Tutor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.PublishedModels.TutorCourse, Tutor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 
 Umbraco.Core.Deploy.IServiceConnector
 

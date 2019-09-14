@@ -57,14 +57,14 @@ namespace Umbraco.Web.PublishedModels
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("bodyText")]
-		public Newtonsoft.Json.Linq.JToken BodyText => Umbraco.Web.PublishedModels.ContentBase.GetBodyText(this);
+		public Newtonsoft.Json.Linq.JToken BodyText => ContentBase.GetBodyText(this);
 
 		///<summary>
 		/// Page Title: The title of the page, this is also the first text in a google search result. The ideal length is between 40 and 60 characters
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("pageTitle")]
-		public string PageTitle => Umbraco.Web.PublishedModels.ContentBase.GetPageTitle(this);
+		public string PageTitle => ContentBase.GetPageTitle(this);
 
 		///<summary>
 		/// Keywords: Keywords that describe the content of the page. This is considered optional since most modern search engines don't use this anymore

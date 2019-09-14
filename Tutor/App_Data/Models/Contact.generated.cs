@@ -46,46 +46,60 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// Pick a Contact Form: If Umbraco Forms is installed you'll be able to select a form
+		/// ContactAddress
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("contactForm")]
-		public string ContactForm => this.Value<string>("contactForm");
+		[ImplementPropertyType("contactAddress")]
+		public string ContactAddress => this.Value<string>("contactAddress");
 
 		///<summary>
-		/// Contact Form Header
+		/// ContactEmail
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("contactFormHeader")]
-		public string ContactFormHeader => this.Value<string>("contactFormHeader");
+		[ImplementPropertyType("contactEmail")]
+		public string ContactEmail => this.Value<string>("contactEmail");
 
 		///<summary>
-		/// Contact Intro
+		/// ContactHeader
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("contactIntro")]
-		public IHtmlString ContactIntro => this.Value<IHtmlString>("contactIntro");
+		[ImplementPropertyType("contactHeader")]
+		public string ContactHeader => this.Value<string>("contactHeader");
 
 		///<summary>
-		/// Map Coordinates
+		/// ContactInformationHeader
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("mapCoordinates")]
-		public object MapCoordinates => this.Value("mapCoordinates");
+		[ImplementPropertyType("contactInformationHeader")]
+		public string ContactInformationHeader => this.Value<string>("contactInformationHeader");
 
 		///<summary>
-		/// Map Header
+		/// ContactMessage
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("mapHeader")]
-		public string MapHeader => this.Value<string>("mapHeader");
+		[ImplementPropertyType("contactMessage")]
+		public string ContactMessage => this.Value<string>("contactMessage");
 
 		///<summary>
-		/// Page Title: The title of the page, this is also the first text in a google search result. The ideal length is between 40 and 60 characters
+		/// ContactPhone
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("pageTitle")]
-		public string PageTitle => this.Value<string>("pageTitle");
+		[ImplementPropertyType("contactPhone")]
+		public string ContactPhone => this.Value<string>("contactPhone");
+
+		///<summary>
+		/// ContactSkype
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("contactSkype")]
+		public string ContactSkype => this.Value<string>("contactSkype");
+
+		///<summary>
+		/// SendMessageHeader
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("sendMessageHeader")]
+		public string SendMessageHeader => this.Value<string>("sendMessageHeader");
 
 		///<summary>
 		/// Keywords: Keywords that describe the content of the page. This is considered optional since most modern search engines don't use this anymore

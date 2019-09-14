@@ -2192,7 +2192,9 @@
     <Compile Include="App_Data\Models\Product.generated.cs" />
     <Compile Include="App_Data\Models\Products.generated.cs" />
     <Compile Include="App_Data\Models\TutorCourse.generated.cs" />
+    <Compile Include="App_Data\Models\TutorFeedback.generated.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SurfaceController\ContactController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="config\imageprocessor\security.config" />

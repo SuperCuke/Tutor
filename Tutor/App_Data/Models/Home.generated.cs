@@ -158,6 +158,13 @@ namespace Umbraco.Web.PublishedModels
 		public string HeroHeader => this.Value<string>("heroHeader");
 
 		///<summary>
+		/// SocialIcons
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("socialIcons")]
+		public IEnumerable<IPublishedContent> SocialIcons => this.Value<IEnumerable<IPublishedContent>>("socialIcons");
+
+		///<summary>
 		/// WhyDescription
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]

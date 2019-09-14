@@ -2,54 +2,90 @@
 @using ContentModels = Umbraco.Web.PublishedModels;
 @{
     Layout = "master.cshtml";
-
-
-    var coordinates = Model.MapCoordinates.ToString().Split(',');
-
-    var latitude = coordinates[0];
-    var longitude = coordinates[1];
-    var zoomLevel = coordinates[2];
-
-    // Build the coordinates string
-    var coordinatesString = longitude + "," + latitude + "," + longitude + "," + latitude;
+    var sent = Context.Request.Url.Query.Contains("sent=true");
 }
-@Html.Partial("~/Views/Partials/SectionHeader.cshtml")
-<section class="section">
+<div class="hero-area section">
+
+    <!-- Backgound Image -->
+    <div class="bg-image bg-parallax overlay" style="background-image:url(/Content/img/page-background.jpg)"></div>
+    <!-- /Backgound Image -->
+
     <div class="container">
-
         <div class="row">
-            <div class="col-md-6">
-                <h2>@Model.MapHeader</h2>
-                <iframe width="550"
-                        height="400"
-                        frameborder="0"
-                        scrolling="no"
-                        marginheight="0"
-                        marginwidth="0"
-                        src="https://www.openstreetmap.org/export/embed.html?bbox=@coordinatesString&amp;layer=mapnik&amp;marker=@Model.MapCoordinates"
-                        style="border: 1px solid black">
-                </iframe>
+            <div class="col-md-10 col-md-offset-1 text-center">
+                @*<ul class="hero-area-tree">
+                        <li><a href="index.html">@Model</a></li>
+                        <li>Contact</li>
+                    </ul>*@
+                <h1 class="white-text">@Model.ContactHeader</h1>
 
-                <br />
-
-                <small>
-                    <a href="https://www.openstreetmap.org/?mlat=@latitude&amp;mlon=@longitude#map=@zoomLevel/@latitude/@longitude&amp;layers=N">View Larger Map</a>
-                </small>
             </div>
-
-            <div class="col-md-6">
-                <h2>@Model.ContactFormHeader</h2>
-                @Model.ContactIntro
-                <p class="compat-msg">
-        <em>Umbraco Forms</em> is required to render this form.It's a breeze to install, all you have to do is
-        go to the<em> Umbraco Forms</em> section in the back office and click Install, that's it! :) 
-        <br /><br />
-        <a href="/umbraco/#/forms" class="button button--border--solid">Go to Back Office and install Forms</a>
-        <!-- When Umbraco Forms is installed, uncomment this line -->
-        @* @Umbraco.RenderMacro("renderUmbracoForm", new {FormGuid=Model.ContactForm.ToString()}) *@
-        </p>
-            </div>
-
         </div>
     </div>
-</section>
+
+</div>
+<div id="contact" class="section">
+
+    <!-- container -->
+    <div class="container">
+
+        <!-- row -->
+        <div class="row">
+
+            <!-- contact form -->
+            <div class="col-md-6">
+                <div class="contact-form">
+                    @if (sent)
+                    {
+                        <div class="feature">
+                            <h4>@Model.ContactMessage</h4>
+                        </div>
+                    }
+                    else
+                    {
+                        <h4>@Model.SendMessageHeader</h4>
+                        <form onsubmit="return postFeedback()">
+                            <input class="input" type="text" id="name" name="Name" placeholder="Имя" required>
+                            <input class="input" type="email" id="email" name="Email" placeholder="Email" required>
+                            <input class="input" type="text" id="subject" name="Subject" placeholder="Тема" required>
+                            <textarea class="input" name="Message" id="message" placeholder="Сообщение" required></textarea>
+                            <button class="main-button icon-button pull-right" o>Отправить</button>
+                        </form>
+                    }
+                </div>
+            </div>
+            <!-- /contact form -->
+            <!-- contact information -->
+            <div class="col-md-5 col-md-offset-1">
+                <h4>@Model.ContactInformationHeader</h4>
+                <ul class="contact-details">
+                    <li><i class="fa fa-envelope"></i><a href="mailto:@Model.ContactEmail">@Model.ContactEmail</a></li>
+                    <li><i class="fa fa-phone"></i>@Model.ContactPhone</li>
+                    <li><i class="fa fa-skype"></i>@Model.ContactSkype</li>
+                    <li><i class="fa fa-map-marker"></i>@Model.ContactAddress</li>
+                </ul>
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4053a6620c1b5e04dc7dbbedb6e6880ba0c1b48c0176fa80d42c24b81df9a588&amp;width=400&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+            </div>
+            <!-- contact information -->
+
+        </div>
+        <!-- /row -->
+
+
+    </div>
+    <!-- /container -->
+
+</div>
+<script>
+    function postFeedback() {
+        $.post('/umbraco/surface/Contact/index', {
+            Name: $('#name').val(),
+            Email: $('#email').val(),
+            Subject: $('#subject').val(),
+            Message: $('#message').val()
+        }).then(function () {
+            window.location += '?sent=true';
+        });
+        return false;
+    }
+</script>

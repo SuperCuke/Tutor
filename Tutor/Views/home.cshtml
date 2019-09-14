@@ -7,196 +7,193 @@
     var courses = Model.CoursesBlocks.OfType<TutorCourse>().ToList();
 }
 
-        <!-- Home -->
-        <div id="home" class="hero-area">
+<!-- Home -->
+<div id="home" class="hero-area">
 
-            <!-- Backgound Image -->
-            <div class="bg-image bg-parallax overlay" style="background-image:url(/Content/img/home-background.jpg)"></div>
-            <!-- /Backgound Image -->
+    <!-- Backgound Image -->
+    <div class="bg-image bg-parallax overlay" style="background-image:url(/Content/img/home-background.jpg)"></div>
+    <!-- /Backgound Image -->
 
-            <div class="home-wrapper">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <h1 class="white-text">@Model.HeroHeader</h1>
-                            <p class="lead white-text">@Model.HeroDescription</p>
-                            <a class="main-button icon-button" href="@Model.HeroCtalink.Url">@Model.HeroCtacaption</a>
-                        </div>
-                    </div>
+    <div class="home-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1 class="white-text">@Model.HeroHeader</h1>
+                    <p class="lead white-text">@Model.HeroDescription</p>
+                    <a class="main-button icon-button" href="@Model.HeroCtalink.Url">@Model.HeroCtacaption</a>
                 </div>
             </div>
-
         </div>
-        <!-- /Home -->
-        <!-- About -->
-        <div id="about" class="section">
+    </div>
 
-            <!-- container -->
-            <div class="container">
+</div>
+<!-- /Home -->
+<!-- About -->
+<div id="about" class="section">
 
-                <!-- row -->
-                <div class="row">
+    <!-- container -->
+    <div class="container">
 
-                    <div class="col-md-12">
-                        <div class="section-header">
-                            <h2>@Model.WhyHeader</h2>
-                            <p class="lead">@Model.WhyDescription</p>
-                        </div>
+        <!-- row -->
+        <div class="row">
 
-                        <!-- feature -->
-                        @foreach (var block in whyMeBlocks)
-                        {
-                        <div class="feature col-md-6">
-                            <i class="feature-icon fa @block.IconCode"></i>
-                            <div class="feature-content">
-                                <h4>@block.BlockHeader </h4>
-                                <p>@block.BlockText</p>
-                            </div>
-                        </div>
-                        }
-                    </div>
-
-                    @*<div class="col-md-6">
-                        <div class="about-img">
-                            <img src="/Content/img/about.png" alt="">
-                        </div>
-                    </div>*@
-
+            <div class="col-md-12">
+                <div class="section-header text-center">
+                    <h2>@Model.WhyHeader</h2>
+                    <p class="lead">@Model.WhyDescription</p>
                 </div>
-                <!-- row -->
 
+                <!-- feature -->
+                @foreach (var block in whyMeBlocks)
+                {
+                    <div class="feature col-md-6">
+                        <i class="feature-icon fa @block.IconCode"></i>
+                        <div class="feature-content">
+                            <h4>@block.BlockHeader </h4>
+                            <p>@block.BlockText</p>
+                        </div>
+                    </div>
+                }
             </div>
-            <!-- container -->
-        </div>
-        <!-- /About -->
-        <!-- Courses -->
-        <div id="courses" class="section">
 
-            <!-- container -->
-            <div class="container">
-
-                <!-- row -->
-                <div class="row">
-                    <div class="section-header text-center">
-                        <h2>@Model.CoursesTitle</h2>
-                        <p class="lead">@Model.CoursesDescription</p>
+            @*<div class="col-md-6">
+                    <div class="about-img">
+                        <img src="/Content/img/about.png" alt="">
                     </div>
-                </div>
-                <!-- /row -->
-                <!-- courses -->
-                <div id="courses-wrapper">
+                </div>*@
 
-                    <!-- row -->
-                    <div class="row">
-                        @foreach (var course in courses)
-                        {
-                        <!-- single course -->
-                        <div class="col-md-3 col-sm-6 col-xs-6">
-                            <div class="course">
-                                <span class="course-img">
-                                    <img src="@(course.Image.Src + course.Image.GetCropUrl("Main"))" alt="">
-                                </span>
-                                <a class="course-title" href="#">@course.Title</a>
-                                @*<div class="course-details">
+        </div>
+        <!-- row -->
+
+    </div>
+    <!-- container -->
+</div>
+<!-- /About -->
+<!-- Courses -->
+<div id="courses" class="section">
+
+    <!-- container -->
+    <div class="container">
+
+        <!-- row -->
+        <div class="row">
+            <div class="section-header text-center">
+                <h2>@Model.CoursesTitle</h2>
+                <p class="lead">@Model.CoursesDescription</p>
+            </div>
+        </div>
+        <!-- /row -->
+        <!-- courses -->
+        <div id="courses-wrapper">
+
+            <!-- row -->
+            <div class="row">
+                @foreach (var course in courses)
+                {
+                    <!-- single course -->
+                    <div class="col-md-3 col-sm-6 col-xs-6">
+                        <div class="course">
+                            <span class="course-img">
+                                <img src="@(course.Image.Src + course.Image.GetCropUrl("Main"))" alt="">
+                            </span>
+                            <a class="course-title" href="#">@course.Title</a>
+                            @*<div class="course-details">
                                     <span class="course-category">Business</span>
                                     <span class="course-price course-free">Free</span>
                                 </div>*@
-                            </div>
-                        </div>
-                        <!-- /single course -->
-                        }
-
-                    </div>
-                    <!-- /row -->
-
-
-                </div>
-                <!-- /courses -->
-            </div>
-            <!-- container -->
-
-        </div>
-        <!-- /Courses -->
-        <!-- Why us -->
-        <div id="why-us" class="section">
-
-            <!-- container -->
-            <div class="container">
-
-                <!-- row -->
-                <div class="row">
-                    <div class="section-header text-center">
-                        <h2>@Model.FeedbackTitle</h2>
-                        <p class="lead">@Model.FeedbackDescription</p>
-                    </div>
-                    @foreach (var feedbackBlock in feedBackBlocks)
-                    {
-                    <!-- feature -->
-                    <div class="col-md-4">
-                        <div class="feature">
-                            <i class="feature-icon fa @feedbackBlock.IconCode"></i>
-                            <div class="feature-content">
-                                <h4>@feedbackBlock.BlockHeader</h4>
-                                <p>@feedbackBlock.BlockText</p>
-                            </div>
                         </div>
                     </div>
-                    <!-- /feature -->
-                    }
-                </div>
-                <!-- /row -->
-
-                <hr class="section-hr">
-
-                <!-- row -->
-                <div class="row">
-
-                    <div class="col-md-6">
-                        <h3>@Model.AboutMeTitle</h3>
-                        <p class="lead">@Model.AboutMeSubTitle</p>
-                        <p>@Model.AboutMeDescription</p>
-                    </div>
-
-                    <div class="col-md-5 col-md-offset-1">
-                        <span class="about-video" href="#">
-                            <img src="@(Model.AboutMePhoto.Src + Model.AboutMePhoto.GetCropUrl("Main"))" alt="">
-                        </span>
-                    </div>
-
-                </div>
-                <!-- /row -->
+                    <!-- /single course -->
+                }
 
             </div>
-            <!-- /container -->
+            <!-- /row -->
+
 
         </div>
-        <!-- /Why us -->
-        <!-- Contact CTA -->
-        <div id="contact-cta" class="section">
+        <!-- /courses -->
+    </div>
+    <!-- container -->
 
-            <!-- Backgound Image -->
-            <div class="bg-image bg-parallax overlay" style="background-image:url(/Content/img/cta2-background.jpg)"></div>
-            <!-- Backgound Image -->
-            <!-- container -->
-            <div class="container">
+</div>
+<!-- /Courses -->
+<!-- Why us -->
+<div id="why-us" class="section">
 
-                <!-- row -->
-                <div class="row">
+    <!-- container -->
+    <div class="container">
 
-                    <div class="col-md-8 col-md-offset-2 text-center">
-                        <h2 class="white-text">@Model.ContactTitle</h2>
-                        <p class="lead white-text">@Model.ContactDescription</p>
-                        <a class="main-button icon-button" href="@Model.HeroCtalink.Url">@Model.HeroCtacaption</a>
-                    </div>
-
-                </div>
-                <!-- /row -->
-
+        <!-- row -->
+        <div class="row">
+            <div class="section-header text-center">
+                <h2>@Model.FeedbackTitle</h2>
+                <p class="lead">@Model.FeedbackDescription</p>
             </div>
-            <!-- /container -->
+            @foreach (var feedbackBlock in feedBackBlocks)
+            {
+                <!-- feature -->
+                <div class="col-md-4">
+                    <div class="feature">
+                        <i class="feature-icon fa @feedbackBlock.IconCode"></i>
+                        <div class="feature-content">
+                            <h4>@feedbackBlock.BlockHeader</h4>
+                            <p>@feedbackBlock.BlockText</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /feature -->
+            }
+        </div>
+        <!-- /row -->
+
+        <hr class="section-hr">
+
+        <!-- row -->
+        <div class="row">
+
+            <div class="col-md-6">
+                <h3>@Model.AboutMeTitle</h3>
+                <p class="lead">@Model.AboutMeSubTitle</p>
+                <p>@Model.AboutMeDescription</p>
+            </div>
+
+            <div class="col-md-5 col-md-offset-1">
+                <span class="about-video" href="#">
+                    <img src="@(Model.AboutMePhoto.Src + Model.AboutMePhoto.GetCropUrl("Main"))" alt="">
+                </span>
+            </div>
 
         </div>
-        <!-- /Contact CTA -->
+        <!-- /row -->
 
+    </div>
+    <!-- /container -->
 
+</div>
+<!-- /Why us -->
+<!-- Contact CTA -->
+<div id="contact-cta" class="section">
 
+    <!-- Backgound Image -->
+    <div class="bg-image bg-parallax overlay" style="background-image:url(/Content/img/cta2-background.jpg)"></div>
+    <!-- Backgound Image -->
+    <!-- container -->
+    <div class="container">
+
+        <!-- row -->
+        <div class="row">
+
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <h2 class="white-text">@Model.ContactTitle</h2>
+                <p class="lead white-text">@Model.ContactDescription</p>
+                <a class="main-button icon-button" href="@Model.HeroCtalink.Url">@Model.HeroCtacaption</a>
+            </div>
+
+        </div>
+        <!-- /row -->
+
+    </div>
+    <!-- /container -->
+
+</div>
+<!-- /Contact CTA -->

@@ -1,22 +1,50 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Blogpost>
+﻿@inherits UmbracoViewPage<Blogpost>
 @using ContentModels = Umbraco.Web.PublishedModels;
-    @{
+@{
     Layout = "master.cshtml";
 }
-@Html.Partial("~/Views/Partials/SectionHeader.cshtml")
+<div class="hero-area section">
 
-<section class="section">
+    <!-- Backgound Image -->
+    <div class="bg-image bg-parallax overlay" style="background-image:url(/Content/img/blog-post-background.jpg)"></div>
+    <!-- /Backgound Image -->
+
     <div class="container">
-        <article>
-            <div class="blogpost-meta">
-                <small class="blogpost-date">@Model.CreateDate.ToShortDateString()</small>
-                <span class="blogpost-cat">
-                    @Html.Partial("~/Views/Partials/CategoryLinks.cshtml", Model.Categories)
-                </span>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 text-center">
+                <h1 class="white-text">@Model.ContentTile</h1>
             </div>
-            <h3>@Model.Excerpt</h3>
-            @Html.GetGridHtml(Model, "bodyText", "bootstrap3-fluid")
-            <!-- todo: implement discus comments -->
-        </article>
+        </div>
     </div>
-</section>
+
+</div>
+<div id="blog" class="section">
+
+    <!-- container -->
+    <div class="container">
+
+        <!-- row -->
+        <div class="row">
+
+            <!-- main blog -->
+            <div id="main" class="col-md-9">
+
+                <!-- blog post -->
+                <div class="blog-post">
+                    @Html.Raw(Model.HtmlContent)
+                </div>
+            </div>
+            <!-- /main blog -->
+            <!-- aside blog -->
+            <div id="aside" class="col-md-3">
+
+            </div>
+            <!-- /aside blog -->
+
+        </div>
+        <!-- row -->
+
+    </div>
+    <!-- container -->
+
+</div>

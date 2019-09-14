@@ -60,6 +60,13 @@ namespace Umbraco.Web.PublishedModels
 		public string BlockText => this.Value<string>("blockText");
 
 		///<summary>
+		/// IconBackground
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("iconBackground")]
+		public string IconBackground => this.Value<string>("iconBackground");
+
+		///<summary>
 		/// IconCode
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
